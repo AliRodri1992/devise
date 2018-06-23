@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails devise_project: production" uuid="01995e33-42d2-47f7-ac9c-d37db2e4911d">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <first-sync>true</first-sync>
+      <user-name>nes_user</user-name>
+    </data-source>
+    <data-source name="devise_db" uuid="9b6a7d3e-442a-443f-9670-8761a1a7588b">
+      <database-info product="PostgreSQL" version="9.5.12" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.2">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <user-name>nes_user</user-name>
+      <introspection-schemas>devise_db:public</introspection-schemas>
+    </data-source>
+    <data-source name="Rails devise_project: test" uuid="1c0fd0de-535f-4fbf-9999-42b6fe73699a">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <first-sync>true</first-sync>
+      <user-name>nes_user</user-name>
+    </data-source>
+  </component>
+</project>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Rails devise_project: production" uuid="01995e33-42d2-47f7-ac9c-d37db2e4911d">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:devise_project_production</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="devise_db" uuid="9b6a7d3e-442a-443f-9670-8761a1a7588b">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:devise_db</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails devise_project: test" uuid="1c0fd0de-535f-4fbf-9999-42b6fe73699a">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:devise_project_test</jdbc-url>
+    </data-source>
+  </component>
+</project>
