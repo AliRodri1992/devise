@@ -1,0 +1,16 @@
+<h2>Recupera tu cuenta</h2>
+<p>Si te olvidaste tu contraseña, puedes utilizar este formulario para resetearla. Recibirás un email con las instrucciones.</p>
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :email, 'Correo electrónico' %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Resetear contraseña" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
