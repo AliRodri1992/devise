@@ -38,6 +38,8 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    devise-i18n (1.5.1)
+      devise (>= 3.4)
     erubis (2.7.0)
     hike (1.2.3)
     i18n (0.9.5)
@@ -106,6 +108,7 @@ PLATFORMS
 
 DEPENDENCIES
   devise (= 3.4.1)
+  devise-i18n
   jbuilder (~> 2.0)
   jquery-rails
   pg (= 0.19.0)
