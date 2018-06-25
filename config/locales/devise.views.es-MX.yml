@@ -2,6 +2,7 @@ es-MX:
   activerecord:
     attributes:
       user:
+        login: Usuario
         confirmation_sent_at: Fecha de envío de confirmación
         confirmation_token: Autentificador de confirmación
         confirmed_at: Fecha de confirmación
@@ -10,6 +11,7 @@ es-MX:
         current_sign_in_at: Fecha del ingreso actual
         current_sign_in_ip: IP del ingreso actual
         email: Correo electrónico
+        username: Nombre de Usuario
         encrypted_password: Contraseña cifrada
         failed_attempts: Intentos fallidos
         last_sign_in_at: Fecha del último ingreso
@@ -37,10 +39,10 @@ es-MX:
     failure:
       already_authenticated: Ya has iniciado sesión.
       inactive: Tu cuenta aún no ha sido activada.
-      invalid: 
+      invalid: '%{authentication_keys} o contraseña  invalido.'
       last_attempt: Tienes un intento más antes de que tu cuenta sea bloqueada.
       locked: Tu cuenta está bloqueada.
-      not_found_in_database: 
+      not_found_in_database: '%{authentication_keys} o contraseña  invalido.'
       timeout: Tu sesión expiró. Por favor, inicia sesión nuevamente para continuar.
       unauthenticated: Tienes que iniciar sesión o registrarte para poder continuar.
       unconfirmed: Tienes que confirmar tu cuenta para poder continuar.

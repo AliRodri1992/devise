@@ -4886,17 +4886,17 @@ input[type="button"].btn-block {
   color: inherit;
 }
 
-.alert-primary {
+.alert-primary, .alert-notice {
   color: #004085;
   background-color: #cce5ff;
   border-color: #b8daff;
 }
 
-.alert-primary hr {
+.alert-primary hr, .alert-notice hr {
   border-top-color: #9fcdff;
 }
 
-.alert-primary .alert-link {
+.alert-primary .alert-link , .alert-notice .alert-link{
   color: #002752;
 }
 
