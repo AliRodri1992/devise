@@ -10,3 +10,9 @@ development:
   username: nes_user
   password: darkstyle66
 
+test:
+  <<: *default
+  database: devise_db
+  username: nes_user
+  password: darkstyle66
+

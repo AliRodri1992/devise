@@ -15,3 +15,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'devise', '3.4.1'
 gem 'devise-i18n'
+group :development, :test do
+  gem 'rspec-rails', '~> 3.7'
+end
