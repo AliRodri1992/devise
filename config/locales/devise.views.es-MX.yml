@@ -11,7 +11,7 @@ es-MX:
         current_sign_in_at: Fecha del ingreso actual
         current_sign_in_ip: IP del ingreso actual
         email: Correo electrónico
-        username: Nombre de Usuario
+        username: 'Nombre de Usuario'
         encrypted_password: Contraseña cifrada
         failed_attempts: Intentos fallidos
         last_sign_in_at: Fecha del último ingreso
@@ -116,7 +116,7 @@ es-MX:
         back: Regresar
         didn_t_receive_confirmation_instructions: "¿No ha recibido las instrucciones de confirmación?"
         didn_t_receive_unlock_instructions: "¿No ha recibido instrucciones para desbloquear su cuenta?"
-        forgot_your_password: "¿Ha olvidado su contraseña?"
+        forgot_your_password: "¿Ha olvidado tu contraseña?"
         sign_in: Iniciar sesión
         sign_in_with_provider: Iniciar sesión con %{provider}
         sign_up: Registrarse
