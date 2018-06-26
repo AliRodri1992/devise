@@ -1,16 +1,19 @@
 module DeviseHelper
   def devise_error_messages!
-    return '' if resource.errors.empty?
+    return "" if resource.errors.empty?
+
     messages = resource.errors.full_messages.map { |msg| content_tag(:li, msg) }.join
+    sentence = I18n.t("errors.messages.not_saved",
+                      count: resource.errors.count,
+                      resource: resource.class.model_name.human.downcase)
+
     html = <<-HTML
     <div class="alert alert-danger alert-dismissible fade show" role="alert">
       <button type="button" class="close" data-dismiss="alert">
         <span aria-hidden="true">&times;</span>
       </button>
-      <strong>
-        #{pluralize(resource.errors.count, "error") + " " + (resource.errors.count > 1 ? 'impidieron' : 'impidio')} que el registro se guardara.
-      </strong>
-      #{messages}
+      <h2>#{sentence}</h2>
+      <ul>#{messages}</ul>
     </div>
     HTML
 
