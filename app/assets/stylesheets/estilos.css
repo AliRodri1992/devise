@@ -26,3 +26,76 @@
     color: #468847;
     text-align: left;
 }
+
+.fondo {
+	background: #ffffff;
+}
+.color {
+	color: #006BAA;
+}
+.img-circle {
+	height: 28px;
+	width: 28px;
+}
+.color_white {
+	background: #ffffff;
+}
+.bg-blue {
+	background: #006BAA !important;
+}
+.bg-skyblue {
+	background: #0dbaf0;
+}
+.color_blue {
+	color: #006BAA !important;
+}
+.menu {
+	background: #006BAA;
+}
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 60px; /* Set the fixed height of the footer here */
+	line-height: 60px; /* Vertically center the text there */
+}
+
+.navbar-right {
+    float: right !important;
+}
+.logo {
+	width: 200px;
+	height: 200px;
+}
+.well {
+	border: 1px solid #dcdcdc;
+	background: white;
+}
+
+.medium {
+	font-size: 125%;
+}
+.tms {
+	width: 50%;
+}
+html {
+  font-size: 1rem;
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 1.4rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 1.6rem;
+  }
+}

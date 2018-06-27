@@ -2,7 +2,6 @@ es-MX:
   activerecord:
     attributes:
       user:
-        login: Usuario
         confirmation_sent_at: Fecha de envío de confirmación
         confirmation_token: Autentificador de confirmación
         confirmed_at: Fecha de confirmación

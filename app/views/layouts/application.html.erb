@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Devise Project</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <%= csrf_meta_tags %>
   </head>
-  <body>
-    <div class="container">
-      <% if user_signed_in? %>
-        Welcome <%= current_user.email %>
-        <%= link_to 'Edit Profile', edit_user_registration_path %> |
-        <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
-      <% else %>
-        <%= link_to 'Sign up', new_user_registration_path %> |
-        <%= link_to 'Login', new_user_session_path %>
-      <% end %>
-      <%= render 'layouts/messages' %>
-
+  <body class="bg-light">
+    <%= render 'layouts/navbar' %>
+    <div class="container-fluid menu">
       <%= yield %>
+    </div>
+    <br>
+    <div class="container">
+      <%= render 'layouts/messages' %>
     </div>
   </body>
 </html>
