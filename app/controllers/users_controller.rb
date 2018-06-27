@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users = User.joins(:roles).where("roles.name = 'externo'")
+    @users = User.where("username <> ?", current_user.username).page(params[:page]).per(5)
   end
 
   def show
