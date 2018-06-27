@@ -17,7 +17,12 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <div class="navbar-nav ml-auto text-center">
         <%= link_to edit_user_registration_path, :class => 'nav-item nav-link active color' do %>
-          <%= image_tag( current_user.avatar, :class => "rounded-circle img-circle") %> <%= current_user.username %>
+          <% unless current_user.avatar.blank? %>
+            <%= image_tag( current_user.avatar, :class => "rounded-circle img-circle") %> <%= current_user.username %>
+          <% else %>
+            <%= image_tag('missing.png', :class => "rounded-circle img-circle") %> <%= current_user.username %>
+          <% end %>
+
         <% end %>
 
         <div class="nav-item dropdown">
