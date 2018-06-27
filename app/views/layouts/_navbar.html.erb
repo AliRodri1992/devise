@@ -16,9 +16,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <div class="navbar-nav ml-auto text-center">
-        <a class="nav-item nav-link active color" href="#">
-          <%= image_tag('avatar.jpg', :class => "rounded-circle img-circle") %> <%= current_user.username %>
-        </a>
+        <%= link_to edit_user_registration_path, :class => 'nav-item nav-link active color' do %>
+          <%= image_tag( current_user.avatar, :class => "rounded-circle img-circle") %> <%= current_user.username %>
+        <% end %>
+
         <div class="nav-item dropdown">
           <a class="nav-link dropdown-toggle color" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-bell color"></i>

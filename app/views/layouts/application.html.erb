@@ -13,13 +13,11 @@
   <body class="bg-light">
     <% if user_signed_in? %>
       <%= render 'layouts/navbar' %>
-      <div class="container-fluid menu">
+      <%= render 'layouts/menu' %>
+      <div class="container pt-5">
         <%= yield %>
       </div>
-      <br>
-      <div class="container">
-        <%= render 'layouts/messages' %>
-      </div>
+      <%= render 'layouts/footer' %>
     <% else %>
       <div class="container">
         <%= render 'layouts/messages' %>
