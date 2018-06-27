@@ -11,13 +11,20 @@
     <%= csrf_meta_tags %>
   </head>
   <body class="bg-light">
-    <%= render 'layouts/navbar' %>
-    <div class="container-fluid menu">
+    <% if user_signed_in? %>
+      <%= render 'layouts/navbar' %>
+      <div class="container-fluid menu">
+        <%= yield %>
+      </div>
+      <br>
+      <div class="container">
+        <%= render 'layouts/messages' %>
+      </div>
+    <% else %>
+      <div class="container">
+        <%= render 'layouts/messages' %>
+      </div>
       <%= yield %>
-    </div>
-    <br>
-    <div class="container">
-      <%= render 'layouts/messages' %>
-    </div>
+    <% end %>
   </body>
 </html>

@@ -17,9 +17,7 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <div class="navbar-nav ml-auto text-center">
         <a class="nav-item nav-link active color" href="#">
-          <% if user_signed_in? %>
-            <%= image_tag('avatar.jpg', :class => "rounded-circle img-circle") %> <%= current_user.username %>
-          <% end %>
+          <%= image_tag('avatar.jpg', :class => "rounded-circle img-circle") %> <%= current_user.username %>
         </a>
         <div class="nav-item dropdown">
           <a class="nav-link dropdown-toggle color" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -42,10 +40,8 @@
           </div>
         </div>
 
-        <% if user_signed_in? %>
-          <%= link_to destroy_user_session_path, :class => 'nav-item nav-link active color', method: :delete do %>
+        <%= link_to destroy_user_session_path, :class => 'nav-item nav-link active color', method: :delete do %>
             <i class="fas fa-sign-out-alt"></i>
-          <% end %>
         <% end %>
 
       </div>
