@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :users, only: [:index, :show, :destroy,:edit,:update] do
 
-  devise_for :users, path_names: {sign_in: 'login', sign_out: 'logout'}, :controllers => { :registrations => "users/registrations" }
+  end
+
   root 'home#index'
 end
