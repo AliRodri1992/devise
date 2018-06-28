@@ -1,5 +1,19 @@
-<div>
-  <table class="table table-hover">
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <%= link_to root_path, class: 'color' do %>
+        Inicio
+      <% end %>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">
+      <%= link_to users_path, class: 'color' do %>
+        Catalogo de Usuarios
+      <% end %>
+    </li>
+  </ol>
+</nav>
+<div class="bg-white well">
+  <table class="table table-hover pt-5">
     <thead>
       <tr class="text-center">
         <th scope="col">#</th>
