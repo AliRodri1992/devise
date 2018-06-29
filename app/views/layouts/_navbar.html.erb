@@ -1,7 +1,7 @@
 <!-- inicio navbar-->
-<nav class="navbar fondo navbar-expand-lg sticky-top">
+<nav class="navbar fondo navbar-expand-lg sticky-top btco-hover-menu">
   <div class="container pt-2 text-center">
-    <a class="navbar-brand" href="#">
+    <%= link_to root_path, class: 'navbar-brand' do %>
       <div class="row">
         <div class="col-lg-6">
           <%= image_tag('identidad_seres.png', :class => "d-inline-block", :width => 'auto', :height => 36) %>
@@ -10,54 +10,85 @@
           <p class="lead color">| Portal de Biblioteca</p>
         </div>
       </div>
-    </a>
-    <button class="navbar-toggler ml-auto mr-auto bg-primary" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <% end %>
+    <button class="navbar-toggler ml-auto mr-auto navy" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <i class="fas fa-bars color_white"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <div class="navbar-nav ml-auto text-center">
-        <%= link_to edit_user_registration_path, :class => 'nav-item nav-link active color' do %>
-          <% unless current_user.avatar.blank? %>
-            <%= image_tag( current_user.avatar, :class => "rounded-circle img-circle") %> <%= current_user.username %>
-          <% else %>
-            <%= image_tag('missing.png', :class => "rounded-circle img-circle") %> <%= current_user.username %>
-          <% end %>
+      <ul class="navbar-nav ml-auto text-center">
+        <li class="nav-item dropdown">
 
-        <% end %>
+          <a class="nav-link dropdown-toggle color" href="#" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <% unless current_user.avatar.blank? %>
+              <%= image_tag(current_user.avatar, :class => "rounded-circle img-circle") %> <%= current_user.username %>
+            <% else %>
+              <%= image_tag('missing.png', :class => "rounded-circle img-circle") %> <%= current_user.username %>
+            <% end %>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownProfile">
+            <li>
+              <a class="dropdown-item" href="home-one.html" target="_blank">
+                Ver Perfil
+              </a>
+            </li>
+            <li>
+              <%= link_to edit_user_registration_path, :class => 'dropdown-item' do %>
+                Editar Perfil
+              <% end %>
+            </li>
+            <li>
+              <a class="dropdown-item" href="home-one.html" target="_blank">
+                Cambiar Contraseña</a>
+            </li>
+          </ul>
+        </li>
 
-        <div class="nav-item dropdown">
+        <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle color" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-bell color"></i>
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#"> Notificacion 1</a>
-            <a class="dropdown-item" href="#"> Notificacion 2</a>
-            <a class="dropdown-item" href="#"> Notificacion 3</a>
-          </div>
-        </div>
-        <div class="nav-item dropdown">
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li>
+              <a class="dropdown-item" href="#"> Notificacion 1</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"> Notificacion 2</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"> Notificacion 3</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle color" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-cogs color"> </i>
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
-            <div class="dropdown-item dropdown-toggle">
-              <i class="fas fa-bookmark"></i> Catalogos
-              <div class="dropdown-menu">
-                <div class="dropdown-item">
-                  Usuarios
-                </div>
-              </div>
-            </div>
-            <a class="dropdown-item" href="#"> <i class="fas fa-newspaper"></i> Reportes</a>
-            <a class="dropdown-item" href="#"> <i class="fas fa-cog"></i> Configuración</a>
-          </div>
-        </div>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+            <li>
+              <a class="dropdown-item dropdown-toggle" href="#"> <i class="fas fa-bookmark"> </i> Catalogos</a>
+              <ul class="dropdown-menu">
+                <li> <%= link_to users_path, class: 'dropdown-item' do %> <i class="fas fa-users"> </i> Usuarios <% end %> </li>
+              </ul>
+            </li>
+            <li><a class="dropdown-item" href="#"> <i class="fas fa-newspaper"></i> Otras cosas</a></li>
+            <li><a class="dropdown-item dropdown-toggle" href="#"> Configuraciones </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Submenu action</a></li>
+                <li><a class="dropdown-item" href="#">Another submenu action</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
 
-        <%= link_to destroy_user_session_path, :class => 'nav-item nav-link active color', method: :delete do %>
+        <li class="nav-item color">
+          <%= link_to destroy_user_session_path, :class => 'nav-link active color', method: :delete do %>
             <i class="fas fa-sign-out-alt"></i>
-        <% end %>
+          <% end %>
+        </li>
 
-      </div>
+
+      </ul>
     </div>
   </div>
 </nav>
