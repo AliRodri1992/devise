@@ -22,7 +22,7 @@ gem 'rolify'
 gem 'paperclip', '~> 4.1'
 
 gem 'kaminari'
-
+gem "font-awesome-rails"
 group :development, :test do
   gem 'rspec-rails', '~> 3.7'
 end

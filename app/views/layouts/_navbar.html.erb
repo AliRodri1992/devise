@@ -12,7 +12,7 @@
       </div>
     <% end %>
     <button class="navbar-toggler ml-auto mr-auto navy" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fas fa-bars color_white"></i>
+      <%= fa_icon "bars", class: 'color_white' %>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav ml-auto text-center">
@@ -45,7 +45,7 @@
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle color" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-bell color"></i>
+            <%= fa_icon "bell", class: 'color' %>
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li>
@@ -62,16 +62,16 @@
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle color" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-cogs color"> </i>
+            <%= fa_icon "cogs", class: 'color' %>
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
             <li>
-              <a class="dropdown-item dropdown-toggle" href="#"> <i class="fas fa-bookmark"> </i> Catalogos</a>
+              <a class="dropdown-item dropdown-toggle" href="#"> <%= fa_icon "bookmark", text: 'Catalogos' %> </a>
               <ul class="dropdown-menu">
-                <li> <%= link_to users_path, class: 'dropdown-item' do %> <i class="fas fa-users"> </i> Usuarios <% end %> </li>
+                <li> <%= link_to users_path, class: 'dropdown-item' do %> <%= fa_icon "users", text: 'Usuarios' %> <% end %> </li>
               </ul>
             </li>
-            <li><a class="dropdown-item" href="#"> <i class="fas fa-newspaper"></i> Otras cosas</a></li>
+            <li><a class="dropdown-item" href="#"> Otras cosas</a></li>
             <li><a class="dropdown-item dropdown-toggle" href="#"> Configuraciones </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Submenu action</a></li>
@@ -80,14 +80,11 @@
             </li>
           </ul>
         </li>
-
         <li class="nav-item color">
           <%= link_to destroy_user_session_path, :class => 'nav-link active color', method: :delete do %>
-            <i class="fas fa-sign-out-alt"></i>
+            <%= fa_icon "sign-out-alt" %>
           <% end %>
         </li>
-
-
       </ul>
     </div>
   </div>

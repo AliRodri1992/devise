@@ -18,3 +18,5 @@
 \.idea/
 
 Gemfile\.lock
+
+app/assets/stylesheets/font-awesome\.min\.css

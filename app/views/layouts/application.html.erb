@@ -6,7 +6,6 @@
     <title>Devise Project</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <%= csrf_meta_tags %>
   </head>
@@ -19,9 +18,7 @@
       </div>
       <%= render 'layouts/footer' %>
     <% else %>
-      <div class="container">
-        <%= render 'layouts/messages' %>
-      </div>
+      <%= render 'layouts/messages' %>
       <%= yield %>
     <% end %>
   </body>
